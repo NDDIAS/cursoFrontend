@@ -43,15 +43,17 @@ namespace SistemaHotel
 
         private void ChamarLogin()
         {
-            if (txtUser.Text == "")
+            if (txtUser.Text.ToString().Trim() == "")
             {
-                MessageBox.Show("Preencha o campo do Utilizador!");
+                MessageBox.Show("Preencha o campo do Utilizador!", "Informação" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtUser.Text = "";
                 txtUser.Focus();
                 return;
             }
-            if (txtPassword.Text == "")
+            if (txtPassword.Text.ToString().Trim() == "")
             {
-                MessageBox.Show("Preencha o campo Password");
+                MessageBox.Show("Preencha o campo Password", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtPassword.Text = "";
                 txtPassword.Focus();
                 return;
             }

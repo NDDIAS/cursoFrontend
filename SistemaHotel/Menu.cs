@@ -37,5 +37,23 @@ namespace SistemaHotel
             pnlTopo.BackColor = Color.FromArgb(230, 230, 230);
             pnlDireita.BackColor = Color.FromArgb(120, 120, 120);
         }
+
+        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastros.Funcionarios form = new Cadastros.Funcionarios();
+            form.Show();
+        }
+
+        private void cargoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastros.Cargo form = new Cadastros.Cargo();
+            form.Show();
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            Produtos.FrmProdutos form = new Produtos.FrmProdutos();
+            form.Show();
+        }
     }
 }
