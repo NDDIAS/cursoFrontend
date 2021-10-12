@@ -37,6 +37,8 @@ namespace SistemaHotel
             this.quartosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuProdutos = new System.Windows.Forms.ToolStripMenuItem();
             this.novoProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,8 +83,6 @@ namespace SistemaHotel
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlTopo.SuspendLayout();
             this.pnlDireita.SuspendLayout();
@@ -125,33 +125,46 @@ namespace SistemaHotel
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // hospedesToolStripMenuItem
             // 
             this.hospedesToolStripMenuItem.Name = "hospedesToolStripMenuItem";
-            this.hospedesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hospedesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.hospedesToolStripMenuItem.Text = "Hospedes";
             // 
             // quartosToolStripMenuItem
             // 
             this.quartosToolStripMenuItem.Name = "quartosToolStripMenuItem";
-            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.quartosToolStripMenuItem.Text = "Quartos";
             // 
             // utilizadoresToolStripMenuItem
             // 
             this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
-            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
             // 
             // serviçosToolStripMenuItem
             // 
             this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
-            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.serviçosToolStripMenuItem.Text = "Serviços";
+            // 
+            // cargoToolStripMenuItem
+            // 
+            this.cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
+            this.cargoToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.cargoToolStripMenuItem.Text = "Cargo";
+            this.cargoToolStripMenuItem.Click += new System.EventHandler(this.cargoToolStripMenuItem_Click);
+            // 
+            // fornecedoresToolStripMenuItem
+            // 
+            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             // 
             // MenuProdutos
             // 
@@ -168,6 +181,7 @@ namespace SistemaHotel
             this.novoProdutoToolStripMenuItem.Name = "novoProdutoToolStripMenuItem";
             this.novoProdutoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novoProdutoToolStripMenuItem.Text = "Novo Produto";
+            this.novoProdutoToolStripMenuItem.Click += new System.EventHandler(this.novoProdutoToolStripMenuItem_Click);
             // 
             // stockToolStripMenuItem
             // 
@@ -601,19 +615,6 @@ namespace SistemaHotel
             this.label1.TabIndex = 0;
             this.label1.Text = "13:00:00";
             // 
-            // cargoToolStripMenuItem
-            // 
-            this.cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
-            this.cargoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cargoToolStripMenuItem.Text = "Cargo";
-            this.cargoToolStripMenuItem.Click += new System.EventHandler(this.cargoToolStripMenuItem_Click);
-            // 
-            // fornecedoresToolStripMenuItem
-            // 
-            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,6 +625,7 @@ namespace SistemaHotel
             this.Controls.Add(this.pnlDireita);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FrmMenu";

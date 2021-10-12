@@ -38,16 +38,19 @@ namespace SistemaHotel.Produtos
             this.cbFornecedores = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtProcurarNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.img = new System.Windows.Forms.PictureBox();
+            this.btnImg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -62,6 +65,7 @@ namespace SistemaHotel.Produtos
             this.btnSalvar.Size = new System.Drawing.Size(75, 72);
             this.btnSalvar.TabIndex = 85;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnEditar
             // 
@@ -75,6 +79,7 @@ namespace SistemaHotel.Produtos
             this.btnEditar.Size = new System.Drawing.Size(75, 72);
             this.btnEditar.TabIndex = 84;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnApagar
             // 
@@ -88,6 +93,7 @@ namespace SistemaHotel.Produtos
             this.btnApagar.Size = new System.Drawing.Size(75, 72);
             this.btnApagar.TabIndex = 83;
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // btnNovo
             // 
@@ -100,6 +106,7 @@ namespace SistemaHotel.Produtos
             this.btnNovo.Size = new System.Drawing.Size(75, 72);
             this.btnNovo.TabIndex = 82;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // grid
             // 
@@ -109,7 +116,7 @@ namespace SistemaHotel.Produtos
             this.grid.Location = new System.Drawing.Point(37, 175);
             this.grid.Name = "grid";
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(661, 185);
+            this.grid.Size = new System.Drawing.Size(692, 185);
             this.grid.TabIndex = 79;
             // 
             // cbFornecedores
@@ -139,18 +146,18 @@ namespace SistemaHotel.Produtos
             this.label3.TabIndex = 77;
             this.label3.Text = "Stock:";
             // 
-            // txtEndereco
+            // txtValor
             // 
-            this.txtEndereco.Enabled = false;
-            this.txtEndereco.Location = new System.Drawing.Point(530, 87);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(168, 20);
-            this.txtEndereco.TabIndex = 72;
+            this.txtValor.Enabled = false;
+            this.txtValor.Location = new System.Drawing.Point(511, 87);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(82, 20);
+            this.txtValor.TabIndex = 72;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(495, 90);
+            this.label2.Location = new System.Drawing.Point(476, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 76;
@@ -159,7 +166,7 @@ namespace SistemaHotel.Produtos
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(288, 90);
+            this.lblDescricao.Location = new System.Drawing.Point(267, 90);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(58, 13);
             this.lblDescricao.TabIndex = 70;
@@ -184,7 +191,7 @@ namespace SistemaHotel.Produtos
             // 
             // txtProcurarNome
             // 
-            this.txtProcurarNome.Location = new System.Drawing.Point(530, 12);
+            this.txtProcurarNome.Location = new System.Drawing.Point(425, 12);
             this.txtProcurarNome.Name = "txtProcurarNome";
             this.txtProcurarNome.Size = new System.Drawing.Size(168, 20);
             this.txtProcurarNome.TabIndex = 75;
@@ -192,34 +199,61 @@ namespace SistemaHotel.Produtos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(456, 15);
+            this.label1.Location = new System.Drawing.Point(351, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 67;
             this.label1.Text = "Procurar:";
             // 
-            // textBox1
+            // txtDescricao
             // 
-            this.textBox1.Location = new System.Drawing.Point(349, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 86;
+            this.txtDescricao.Location = new System.Drawing.Point(328, 87);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(138, 20);
+            this.txtDescricao.TabIndex = 86;
             // 
-            // textBox2
+            // txtStock
             // 
-            this.textBox2.Location = new System.Drawing.Point(72, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(106, 20);
-            this.textBox2.TabIndex = 87;
+            this.txtStock.Location = new System.Drawing.Point(72, 126);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(106, 20);
+            this.txtStock.TabIndex = 87;
+            // 
+            // img
+            // 
+            this.img.Location = new System.Drawing.Point(609, 12);
+            this.img.Name = "img";
+            this.img.Size = new System.Drawing.Size(120, 120);
+            this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img.TabIndex = 88;
+            this.img.TabStop = false;
+            // 
+            // btnImg
+            // 
+            this.btnImg.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImg.Enabled = false;
+            this.btnImg.FlatAppearance.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnImg.FlatAppearance.BorderSize = 0;
+            this.btnImg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImg.Location = new System.Drawing.Point(735, 112);
+            this.btnImg.Name = "btnImg";
+            this.btnImg.Size = new System.Drawing.Size(20, 20);
+            this.btnImg.TabIndex = 89;
+            this.btnImg.Text = "+";
+            this.btnImg.UseVisualStyleBackColor = false;
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
             // FrmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnImg);
+            this.Controls.Add(this.img);
+            this.Controls.Add(this.txtStock);
+            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnApagar);
@@ -228,7 +262,7 @@ namespace SistemaHotel.Produtos
             this.Controls.Add(this.cbFornecedores);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.txtNome);
@@ -236,11 +270,15 @@ namespace SistemaHotel.Produtos
             this.Controls.Add(this.txtProcurarNome);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtos";
+            this.Load += new System.EventHandler(this.FrmProdutos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,14 +294,16 @@ namespace SistemaHotel.Produtos
         private System.Windows.Forms.ComboBox cbFornecedores;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtProcurarNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.PictureBox img;
+        private System.Windows.Forms.Button btnImg;
     }
 }

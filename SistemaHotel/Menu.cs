@@ -55,5 +55,11 @@ namespace SistemaHotel
             Produtos.FrmProdutos form = new Produtos.FrmProdutos();
             form.Show();
         }
+
+        private void novoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Produtos.FrmProdutos form = new Produtos.FrmProdutos();
+            form.Show();
+        }
     }
 }
